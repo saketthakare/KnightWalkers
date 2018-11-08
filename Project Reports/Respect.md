@@ -1,0 +1,5 @@
+# Respect
+
+## Week-1:
+
+Week one started with discussing game themes, tools & technologies to be used for the implementation. Variety of ideas popped up in the meeting room with each team member suggesting a different type of game genres and development platform. All ideas were patiently listened to from individual developers who suggested them, understanding the view behind it and noting all the pros-cons as well. All these ideas were then combined and written down on board under three major categories - Actors, Genre and Players. A voting was done on every idea on the board and based on the maximum votes, the final theme of the project was decided. Since every developer gave their inputs, we ensured respect was given to everyone's thoughts and skills. This way, the theme and development platform could be finalized easily and in agreement and respect for everyone.
