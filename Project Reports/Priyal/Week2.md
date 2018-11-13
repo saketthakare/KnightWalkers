@@ -13,8 +13,11 @@
 5.  Add script for menu - Done
 6.  Scripts for buttons - In progress
 7.  Design and implement settings screen
+
     A. Add volume control feature in setting screen - Done
+    
     B. Enable/Disable game music - In Progress
+    
     C. Go back to main menu - Done
 
 # What am I planning to work on next?
