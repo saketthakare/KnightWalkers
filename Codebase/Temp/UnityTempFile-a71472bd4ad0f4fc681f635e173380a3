@@ -77,8 +77,8 @@
 -r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll'
 -r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll'
 -r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll'
--r:'/Users/akshayj/Library/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll'
--r:'/Users/akshayj/Library/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll'
+-r:'/Users/mangyadav/Library/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll'
+-r:'/Users/mangyadav/Library/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll'
 -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/unity/mscorlib.dll'
 -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/unity/System.dll'
 -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/unity/System.Core.dll'
@@ -186,6 +186,7 @@
 -define:ENABLE_UNITY_COLLECTIONS_CHECKS
 -define:ENABLE_BURST_AOT
 -define:UNITY_TEAM_LICENSE
+-define:ENABLE_VSTU
 -define:CROSS_PLATFORM_INPUT
 'Assets/Campfire Pack/Script/SwitchView.cs'
 'Assets/effects.cs'
@@ -230,5 +231,12 @@
 'Assets/Handpainted Forest Environment Free Sample/Standard Assets/Utility/WaypointCircuit.cs'
 'Assets/Handpainted Forest Environment Free Sample/Standard Assets/Utility/WaypointProgressTracker.cs'
 'Assets/moveCam.cs'
+'Assets/Scripts/MainMenu/HelpCommand.cs'
+'Assets/Scripts/MainMenu/HomeMenu.cs'
+'Assets/Scripts/MainMenu/ICommand.cs'
+'Assets/Scripts/MainMenu/IHomeMenu.cs'
+'Assets/Scripts/MainMenu/PlayCommand.cs'
+'Assets/Scripts/MainMenu/QuitCommand.cs'
+'Assets/Scripts/MainMenu/SettingsCommand.cs'
 'Assets/sphere.cs'
 -lib:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/unity'
