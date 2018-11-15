@@ -7,3 +7,11 @@ First of all, we created a Whatsapp group for proper communication among each an
 had face-to-face communication by arranging various meetings. The meetings helped us to gain the perspective of the team on a number of game ideas.
 For techinical discussions viz. sharing important links, articles and videos we created a channel on Slack.
 We plan to continue the same for all the future discussions.
+
+## Week-2:
+
+- As we have now decided on the Game idea, we invested our time in getting to know the different technologies involved.
+- Also, from all the resources available to us, we filtered out the important and most useful ones.
+- The link to this information was shared on the Slack channel by each team member according to his/her findings.
+- We discussed about the division of workload, manner of commits to be made on Github and the progress each one made throughout the week.
+- Communicating with each other to know the progress made by every team member gave us an idea about the progress of the game as a whole and an estimate about the timely completion of the project.
