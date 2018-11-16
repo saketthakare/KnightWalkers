@@ -6,6 +6,7 @@ public class GM : MonoBehaviour {
 
     public static float verticalVelocity = 0;
     public static float horizontalVelocity = 4;
+    public static int coinTotal = 0;
 
     // Use this for initialization
     void Start () {

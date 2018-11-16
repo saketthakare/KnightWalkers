@@ -38,6 +38,19 @@ public class sphere : MonoBehaviour {
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.name == "LevelFinishedTrigger")
+        {
+            SceneManager.LoadScene("LevelComplete");
+        }
+
+        if (other.gameObject.name.StartsWith("coin"))
+        {
+            GM.coinTotal += 10;
+        }
+    }
+
     IEnumerator stopSlide()
     {
         yield return new WaitForSeconds(.5f);
