@@ -122,8 +122,9 @@ GameObject:
   m_Component:
   - component: {fileID: 25704052}
   - component: {fileID: 25704051}
+  - component: {fileID: 25704053}
   m_Layer: 0
-  m_Name: GM
+  m_Name: Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -135,7 +136,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 25704050}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c8e444223c91f4d0d9178b4486dca9bb, type: 3}
   m_Name: 
@@ -157,6 +158,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &25704053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 25704050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aea7eee23722124da183086100fbd5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zScenePos: 216
+  base1: {fileID: 4697641115914710, guid: 4ab7ecc6cfd5e7842be2009adcb6c0d4, type: 2}
+  base2: {fileID: 4001575723476912, guid: 7cd95770c0b275448b57e81fb9e26b13, type: 2}
+  randNo: 0
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0

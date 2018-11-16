@@ -8,6 +8,6 @@ public class PlayCommand : ICommand
 
     public void Execute()
     {
-        SceneManager.LoadScene("PlayScene", LoadSceneMode.Single);
+        SceneManager.LoadScene("IceScene", LoadSceneMode.Single);
     }
 }
