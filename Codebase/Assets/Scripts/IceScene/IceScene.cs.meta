@@ -8,8 +8,7 @@ MonoImporter:
   - base2: {instanceID: 0}
   - capsule: {instanceID: 0}
   - fence: {instanceID: 0}
-  - fire: {fileID: 4954956544608520, guid: 030d64b7dc8cc074897556e22414d374, type: 2}
-  - player: {fileID: 4374563579910814, guid: 15e1a4a8929704a4594e68a07b0e87f4, type: 2}
+  - fire: {fileID: 4350983430382110, guid: a71c6335303f26f45a9ed20c7fe9064e, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

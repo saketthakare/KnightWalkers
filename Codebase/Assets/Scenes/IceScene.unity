@@ -173,7 +173,7 @@ MonoBehaviour:
   base2: {fileID: 4001575723476912, guid: 7cd95770c0b275448b57e81fb9e26b13, type: 2}
   capsule: {fileID: 4056157319087364, guid: e36b55280ad53474e842eba32a1216bb, type: 2}
   fence: {fileID: 4974033896052948, guid: f061224539601254fb25eedd334c8586, type: 2}
-  fire: {fileID: 4954956544608520, guid: 030d64b7dc8cc074897556e22414d374, type: 2}
+  fire: {fileID: 4350983430382110, guid: a71c6335303f26f45a9ed20c7fe9064e, type: 2}
   randNo: 0
   randObj: 0
   randLane: 0
@@ -658,7 +658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5148b700d48f7b4b983769484305bcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 667504916}
   volumeSlider: {fileID: 0}
   musicToggler: {fileID: 0}
 --- !u!1 &678057471
