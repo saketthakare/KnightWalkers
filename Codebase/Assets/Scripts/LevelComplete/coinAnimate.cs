@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class stats : MonoBehaviour {
+public class coinAnimate : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -11,6 +11,6 @@ public class stats : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        GetComponent<TextMesh>().text = "Coins : " + GM.coinTotal;
+        transform.Rotate(1, 0, 0);
 	}
 }

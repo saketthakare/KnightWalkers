@@ -8,6 +8,14 @@ public class GM : MonoBehaviour {
     public static float horizontalVelocity = 12;
 
     public static int coinTotal = 0;
+    public static float totalTime = 0;
+
+    // Use this for initialization
+
+    public float zScenePos = 216;
+    
+    public Transform base1;
+    public Transform base2;
     
     // Use this for initialization
 
@@ -16,6 +24,7 @@ public class GM : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		}
+        totalTime += Time.deltaTime;
+    }
 		
 }

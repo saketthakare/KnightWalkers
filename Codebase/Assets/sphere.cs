@@ -40,7 +40,7 @@ public class sphere : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.name == "LevelFinishedTrigger")
+        if(other.gameObject.tag == "lethal")
         {
             SceneManager.LoadScene("LevelComplete");
         }
