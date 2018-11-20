@@ -2,10 +2,9 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const helmet = require('helmet')
-const httpStatus = require('http-status')
-const sql = require('./database-connection')
-const app = express()
 const config = require('./config')
+const scoreController =  require('./score.controller')
+const app = express()
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({
@@ -14,6 +13,7 @@ app.use(bodyParser.urlencoded({
 app.use(cors())
 app.use(helmet())
 
+app.post('/', scoreController.addScore)
 
 app.listen(config.port, (err) => {
     if (err) {
