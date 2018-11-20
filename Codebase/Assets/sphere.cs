@@ -50,12 +50,33 @@ public class sphere : MonoBehaviour {
             GM.coinTotal += 10;
         }
     }
+    
+    private void OnCollisionEnter(Collision other)
+    {
+        if(other.gameObject.tag == "lethal")
+        {
+            Destroy(gameObject);
+            GM.horizontalVelocity = 0;
+        }
+        else if(other.gameObject.tag == "boost")
+        {
+            Destroy(other.gameObject);
+            GM.horizontalVelocity = 25;
+            StartCoroutine(stopBoost());
+        }
+    }
 
     IEnumerator stopSlide()
     {
         yield return new WaitForSeconds(.5f);
         horizVel = 0;
         controllocked = "n";
+    }
+    
+    IEnumerator stopBoost()
+    {
+		yield return new WaitForSeconds(8);
+		GM.horizontalVelocity = 12;		
     }
 
 }
