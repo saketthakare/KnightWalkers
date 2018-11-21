@@ -12,13 +12,20 @@ public class sphere : MonoBehaviour {
     public int laneNum = 2;
     public string controllocked = "n";
 
+    public PlayerHealth playerHealth;
+    public int collisionDamage = 10;
     // Use this for initialization
     void Start () {
 
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    private void Awake()
+    {
+        playerHealth = this.GetComponent<PlayerHealth>();
+    }
+
+    // Update is called once per frame
+    void Update () {
         GetComponent<Rigidbody>().velocity = new Vector3(horizVel, GM.verticalVelocity, GM.horizontalVelocity);
 
         if(Input.GetKeyDown(moveL) && laneNum > 1 && controllocked == "n")
@@ -36,13 +43,23 @@ public class sphere : MonoBehaviour {
             laneNum += 1;
             controllocked = "y";
         }
+
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "lethal")
         {
-            SceneManager.LoadScene("LevelComplete");
+           // SceneManager.LoadScene("LevelComplete");
+            if (playerHealth.currentHealth <= 0)
+            {
+                SceneManager.LoadScene("LevelComplete");
+            }
+
+            if (playerHealth.currentHealth > 0)
+            {
+                playerHealth.TakeDamage(collisionDamage);
+            }
         }
 
         if (other.gameObject.name.StartsWith("coin"))
