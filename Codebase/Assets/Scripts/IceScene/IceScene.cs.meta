@@ -4,11 +4,14 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - base1: {instanceID: 0}
-  - base2: {instanceID: 0}
-  - capsule: {instanceID: 0}
-  - fence: {instanceID: 0}
+  - base1: {fileID: 4697641115914710, guid: 4ab7ecc6cfd5e7842be2009adcb6c0d4, type: 2}
+  - base2: {fileID: 4001575723476912, guid: 7cd95770c0b275448b57e81fb9e26b13, type: 2}
+  - capsule: {fileID: 4056157319087364, guid: e36b55280ad53474e842eba32a1216bb, type: 2}
+  - fence: {fileID: 4974033896052948, guid: f061224539601254fb25eedd334c8586, type: 2}
   - fire: {fileID: 4350983430382110, guid: a71c6335303f26f45a9ed20c7fe9064e, type: 2}
+  - fire2: {instanceID: 0}
+  - fireObj: {fileID: 1154433961210866, guid: a71c6335303f26f45a9ed20c7fe9064e, type: 2}
+  - fenceObj: {fileID: 1957370157551532, guid: f061224539601254fb25eedd334c8586, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
