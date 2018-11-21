@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IObstacleFactory {
-
-	void createObstacle(GameObject obstacle,float x, float y, float z);
+public interface IObstacleFactory 
+{
+	IObstacle createObstacle(GameObject obstacle,float x, float y, float z);
 }

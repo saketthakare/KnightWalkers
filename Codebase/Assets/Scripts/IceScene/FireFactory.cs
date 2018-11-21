@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class FireFactory : IObstacleFactory {
 
-	public void createObstacle(GameObject fire,float x, float y, float z)
+	public IObstacle createObstacle(GameObject fire,float x, float y, float z)
 	{
-		GameObject clonefire = MonoBehaviour.Instantiate(fire,new Vector3(x,y,z),Quaternion.identity) as GameObject;
+		// Fire fireobj = new Fire();
+		// Fire fireScript = fire.AddComponent<Fire>();
+		// fireScript.obj =  MonoBehaviour.Instantiate(fire,new Vector3(x,y,z),Quaternion.identity) as GameObject;
+		GameObject o =  MonoBehaviour.Instantiate(fire,new Vector3(x,y,z),Quaternion.identity) as GameObject;	
+		Fire fireScript = o.AddComponent<Fire>();
+
+		IObstacle obs = fireScript;
+		return obs;
 	}
 }

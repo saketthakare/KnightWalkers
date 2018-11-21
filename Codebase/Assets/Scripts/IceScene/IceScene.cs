@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class IceScene : MonoBehaviour {
     
@@ -23,11 +24,17 @@ public class IceScene : MonoBehaviour {
 
 	public GameObject fireObj;
 	public GameObject fenceObj;
+	public GameObject player;
+
+	public Fence newfenceobject;
+	public Fire newfireobject;
+
 	IObstacleFactory objfact;
     
     //ObstacleFactory obsFactory = new ObstacleFactory();
 
     // Use this for initialization
+
     void Start () {
 		Instantiate(base1,new Vector3(0,0,72),base1.rotation);
 		Instantiate(base2,new Vector3(0,0,108),base1.rotation);
@@ -42,7 +49,7 @@ public class IceScene : MonoBehaviour {
 		
 		if((zScenePos-zPlayerPos)  < 300)
 		{
-			randNo = Random.Range(0,10);
+			randNo = UnityEngine.Random.Range(0,10);
 			
 			if(randNo<5)
 			{
@@ -60,8 +67,8 @@ public class IceScene : MonoBehaviour {
 		if((zObjPos-zPlayerPos)  < 300)
 		{
 		
-			randObj = Random.Range(0,50);
-			randLane = Random.Range(1,4);
+			randObj = UnityEngine.Random.Range(0,50);
+			randLane = UnityEngine.Random.Range(1,4);
 			
 			if(randLane==1)
 				laneNo = -1.5f;
@@ -72,14 +79,34 @@ public class IceScene : MonoBehaviour {
 			
 			if(randObj>15 && randObj<=25)
 			{
+				Debug.Log("random creation of fires");
 				objfact = new FireFactory();
-				objfact.createObstacle(fireObj,laneNo,1.5f,zObjPos);
+				newfireobject = (Fire)objfact.createObstacle(fireObj,laneNo,1.5f,zObjPos);
+
+				// Rigidbody fireRigidBody = newfireobject.obj.AddComponent<Rigidbody>();
+				// fireRigidBody.useGravity = false;
+
+				BoxCollider fireBoxCollider = newfireobject.obj.AddComponent<BoxCollider>();
+				// fireBoxCollider.isTrigger = true;
+
+				newfireobject.attachPlayer(player.GetComponent<sphere>());
+				
 				zObjPos += randObj;
 			}
 			else if(randObj>25 && randObj<=40)
 			{
+				Debug.Log("random creation of fences");
 				objfact = new FenceFactory();
-				objfact.createObstacle(fenceObj,laneNo,0.75f,zObjPos);
+				newfenceobject = (Fence)objfact.createObstacle(fenceObj,laneNo,0.75f,zObjPos);
+
+				// Rigidbody fenceRigidBody = newfenceobject.obj.AddComponent<Rigidbody>();
+				// fenceRigidBody.useGravity = false;
+				
+				BoxCollider fenceBoxCollider = newfenceobject.obj.AddComponent<BoxCollider>();
+				// fenceBoxCollider.isTrigger = true;
+				
+				newfenceobject.attachPlayer(player.GetComponent<sphere>());
+				
 				zObjPos += randObj;
 			}
 			else if(randObj>45)

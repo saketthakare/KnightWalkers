@@ -40,10 +40,10 @@ public class sphere : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "lethal")
-        {
-            SceneManager.LoadScene("LevelComplete");
-        }
+        // if(other.gameObject.tag == "lethal")
+        // {
+        //     SceneManager.LoadScene("LevelComplete");
+        // }
 
         if (other.gameObject.name.StartsWith("coin"))
         {
@@ -53,12 +53,13 @@ public class sphere : MonoBehaviour {
     
     private void OnCollisionEnter(Collision other)
     {
-        if(other.gameObject.tag == "lethal")
-        {
-            Destroy(gameObject);
-            GM.horizontalVelocity = 0;
-        }
-        else if(other.gameObject.tag == "boost")
+        // if(other.gameObject.tag == "lethal")
+        // {
+        //     Destroy(gameObject);
+        //     GM.horizontalVelocity = 0;
+        // }
+        // else 
+        if(other.gameObject.tag == "boost")
         {
             Destroy(other.gameObject);
             GM.horizontalVelocity = 25;
@@ -77,6 +78,12 @@ public class sphere : MonoBehaviour {
     {
 		yield return new WaitForSeconds(8);
 		GM.horizontalVelocity = 12;		
+    }
+
+    public void destroyObject()
+    {
+        Destroy(this.gameObject);
+        GM.horizontalVelocity = 0;
     }
 
 }
