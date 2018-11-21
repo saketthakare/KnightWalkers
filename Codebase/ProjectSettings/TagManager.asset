@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - lethal
+  - boost
+  - SettingsMenu
+  - MainMenu
+  - CharacterSelectionMenu
   layers:
   - Default
   - TransparentFX
