@@ -87,7 +87,7 @@ public class IceScene : MonoBehaviour {
 				// fireRigidBody.useGravity = false;
 
 				BoxCollider fireBoxCollider = newfireobject.obj.AddComponent<BoxCollider>();
-				// fireBoxCollider.isTrigger = true;
+				 fireBoxCollider.isTrigger = true;
 
 				newfireobject.attachPlayer(player.GetComponent<sphere>());
 				
@@ -103,7 +103,7 @@ public class IceScene : MonoBehaviour {
 				// fenceRigidBody.useGravity = false;
 				
 				BoxCollider fenceBoxCollider = newfenceobject.obj.AddComponent<BoxCollider>();
-				// fenceBoxCollider.isTrigger = true;
+				fenceBoxCollider.isTrigger = true;
 				
 				newfenceobject.attachPlayer(player.GetComponent<sphere>());
 				

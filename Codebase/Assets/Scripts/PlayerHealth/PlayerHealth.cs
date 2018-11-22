@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour {
 
@@ -16,9 +17,12 @@ public class PlayerHealth : MonoBehaviour {
     bool isDead;
     bool damaged;
 
+    public sphere sphere;
+
     private void Awake()
     {
         currentHealth = startHealth;
+        sphere = this.GetComponent<sphere>();
     }
 
 
@@ -39,13 +43,25 @@ public class PlayerHealth : MonoBehaviour {
 	}
 
     public void TakeDamage(int amount){
-        damaged = true;
-        currentHealth -= amount;
-        healthSlider.value = currentHealth;
-
-        if(currentHealth<=0 && !isDead){
-            Death();
+        if (this.currentHealth <= 0)
+        {
+            Destroy(sphere.gameObject);
+            GM.horizontalVelocity = 0;
+            SceneManager.LoadScene("LevelComplete");
         }
+
+        if (this.currentHealth > 0)
+        {
+            damaged = true;
+            currentHealth -= amount;
+            healthSlider.value = currentHealth;
+
+            if (currentHealth <= 0 && !isDead)
+            {
+                Death();
+            }
+        }
+
     }
 
     private void Death()

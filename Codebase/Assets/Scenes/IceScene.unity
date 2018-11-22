@@ -185,6 +185,8 @@ MonoBehaviour:
   fireObj: {fileID: 1154433961210866, guid: a71c6335303f26f45a9ed20c7fe9064e, type: 2}
   fenceObj: {fileID: 1957370157551532, guid: f061224539601254fb25eedd334c8586, type: 2}
   player: {fileID: 678057471}
+  newfenceobject: {fileID: 0}
+  newfireobject: {fileID: 0}
 --- !u!1 &147203166
 GameObject:
   m_ObjectHideFlags: 0
@@ -613,7 +615,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 534669902}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a68b92a67983c4b93b2e9ef3b599cbf0, type: 3}
+  m_Script: {fileID: 11500000, guid: 0aacbf7c8e11447f6bfbf4f51ce18bdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!54 &534669907
@@ -639,6 +641,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 626961373}
+  - component: {fileID: 626961375}
   - component: {fileID: 626961374}
   m_Layer: 5
   m_Name: HeathSlider
@@ -715,6 +718,24 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &626961375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 626961372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20d61e4ffdbaf4b57961e28d0a1b90a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startHealth: 100
+  currentHealth: 0
+  healthSlider: {fileID: 626961374}
+  damageImage: {fileID: 2130870204}
+  flashSpeed: 5
+  flashColor: {r: 1, g: 0, b: 0, a: 0.1}
+  sphere: {fileID: 0}
 --- !u!1 &633392808
 GameObject:
   m_ObjectHideFlags: 0
@@ -911,7 +932,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 678057471}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c6c2b14346ee45b5a9edced0654e010, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ab8f23e483604ebaaad4743139c16c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveL: 276
@@ -1020,6 +1041,7 @@ MonoBehaviour:
   damageImage: {fileID: 2130870204}
   flashSpeed: 5
   flashColor: {r: 1, g: 0, b: 0, a: 0.4}
+  sphere: {fileID: 0}
 --- !u!1 &1096854808
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,13 +12,21 @@ public class sphere : MonoBehaviour {
     public int laneNum = 2;
     public string controllocked = "n";
 
+    public PlayerHealth playerHealth;
+    public int collisionDamage = 10;
+
     // Use this for initialization
     void Start () {
 
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    private void Awake()
+    {
+        playerHealth = this.GetComponent<PlayerHealth>();
+    }
+
+    // Update is called once per frame
+    void Update () {
         GetComponent<Rigidbody>().velocity = new Vector3(horizVel, GM.verticalVelocity, GM.horizontalVelocity);
 
         if(Input.GetKeyDown(moveL) && laneNum > 1 && controllocked == "n")
@@ -40,10 +48,10 @@ public class sphere : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        // if(other.gameObject.tag == "lethal")
-        // {
-        //     SceneManager.LoadScene("LevelComplete");
-        // }
+        if(other.gameObject.tag == "lethal")
+        {
+            notifyObserver();
+        }
 
         if (other.gameObject.name.StartsWith("coin"))
         {
@@ -53,12 +61,12 @@ public class sphere : MonoBehaviour {
     
     private void OnCollisionEnter(Collision other)
     {
-        // if(other.gameObject.tag == "lethal")
-        // {
-        //     Destroy(gameObject);
-        //     GM.horizontalVelocity = 0;
-        // }
-        // else 
+        //if(other.gameObject.tag == "lethal")
+        //{
+        //    Destroy(gameObject);
+        //    GM.horizontalVelocity = 0;
+        //}
+        //else
         if(other.gameObject.tag == "boost")
         {
             Destroy(other.gameObject);
@@ -82,8 +90,15 @@ public class sphere : MonoBehaviour {
 
     public void destroyObject()
     {
-        Destroy(this.gameObject);
-        GM.horizontalVelocity = 0;
+        //Destroy(this.gameObject);
+        //GM.horizontalVelocity = 0;
+        notifyObserver();
+    }
+
+
+
+    public void notifyObserver(){
+        playerHealth.TakeDamage(collisionDamage);
     }
 
 }
