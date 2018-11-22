@@ -141,9 +141,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e444223c91f4d0d9178b4486dca9bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zScenePos: 216
-  base1: {fileID: 0}
-  base2: {fileID: 0}
 --- !u!4 &25704052
 Transform:
   m_ObjectHideFlags: 0
@@ -234,7 +231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.1639529, g: 0.804, b: 0.022070587, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -735,7 +732,7 @@ MonoBehaviour:
   damageImage: {fileID: 2130870204}
   flashSpeed: 5
   flashColor: {r: 1, g: 0, b: 0, a: 0.1}
-  sphere: {fileID: 0}
+  sphere: {fileID: 678057472}
 --- !u!1 &633392808
 GameObject:
   m_ObjectHideFlags: 0
@@ -794,7 +791,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1124,7 +1121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.881, g: 0.030835023, b: 0.11553604, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
