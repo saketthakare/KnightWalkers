@@ -8,6 +8,13 @@ public class HomeMenu : MonoBehaviour, IHomeMenu
     readonly ICommand helpCommand = new HelpCommand();
     readonly ICommand playCommand = new PlayCommand();
     readonly ICommand characterCommand = new CharacterCommand();
+    public GameObject player;
+    private GameController gameController = GameController.GetInstance();
+
+    public Texture john;
+    public Texture hound;
+    public Texture tyrion;
+
     public Button quitButton, settingsButton, helpButton, playButton, characterSelectionButton;
 
     void Start(){
@@ -17,6 +24,24 @@ public class HomeMenu : MonoBehaviour, IHomeMenu
         playButton.onClick.AddListener(playCommand.Execute);
         characterSelectionButton.onClick.AddListener(characterCommand.Execute);
     }
+
+    void Update(){
+
+        player.GetComponent<RawImage>().texture = GetTexture();
+    }
+
+    private Texture GetTexture()
+    {
+        string playCharacter = gameController.GetPlayer();
+        if (playCharacter == "john")
+            return john;
+        if (playCharacter == "hound")
+            return hound;
+        if (playCharacter == "tyrion")
+            return tyrion;
+        return john;
+    }
+
     /*public void handleInput(){
     }
     public void Play()

@@ -6,17 +6,17 @@ public class AudioController : MonoBehaviour
     public AudioSource audioSource;
     public Slider volumeSlider;
     public Toggle musicToggler;
-    private readonly GlobalAudioController globalAudioController = GlobalAudioController.GetInstance();
+    private readonly GameController gameController = GameController.GetInstance();
 
     void Start(){
         if (audioSource != null)
         {
-            audioSource.enabled = globalAudioController.GetMusicOption();
-            audioSource.volume = globalAudioController.GetVolume();
+            audioSource.enabled = gameController.GetMusicOption();
+            audioSource.volume = gameController.GetVolume();
         }
         if (volumeSlider != null)
         {
-            volumeSlider.value = globalAudioController.GetVolume();
+            volumeSlider.value = gameController.GetVolume();
             volumeSlider.onValueChanged.AddListener(delegate { ControlVolume(); });
         }
         if (musicToggler != null)
@@ -34,12 +34,12 @@ public class AudioController : MonoBehaviour
         }
         else
             audioSource.volume = 0.0f;*/
-        globalAudioController.SetMusicOption(audioSource.enabled);
+        gameController.SetMusicOption(audioSource.enabled);
     }
 
     private void ControlVolume()
     {
         audioSource.volume = volumeSlider.value;
-        globalAudioController.SetVolume(audioSource.volume);
+        gameController.SetVolume(audioSource.volume);
     }
 }

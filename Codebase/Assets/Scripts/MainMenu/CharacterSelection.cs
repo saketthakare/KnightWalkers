@@ -4,8 +4,9 @@ public class CharacterSelection : MonoBehaviour {
 
     private GameObject[] characterList;
     private int index;
-	// Use this for initialization
-	private void Start () {
+    private readonly GameController gameController = GameController.GetInstance();
+    // Use this for initialization
+    private void Start () {
         characterList = new GameObject[transform.childCount];
 
         for (int i = 0; i < transform.childCount; i++)
@@ -44,5 +45,19 @@ public class CharacterSelection : MonoBehaviour {
             index = 0;
 
         characterList[index].SetActive(true);
+    }
+
+    public void Back()
+    {
+        GameObject.Find("Canvas").transform.Find("CharacterSelectionMenu").gameObject.SetActive(false);
+        GameObject.Find("Canvas").transform.Find("MainMenu").gameObject.SetActive(true);
+    }
+
+    public void Confirm()
+    {
+        string character = characterList[index].name;
+        gameController.SetPlayer(character);
+        GameObject.Find("Canvas").transform.Find("CharacterSelectionMenu").gameObject.SetActive(false);
+        GameObject.Find("Canvas").transform.Find("MainMenu").gameObject.SetActive(true);
     }
 }
