@@ -90,8 +90,6 @@ public class sphere : MonoBehaviour {
 
     public void destroyObject()
     {
-        Destroy(this.gameObject);
-        GM.horizontalVelocity = 0;
         notifyObserver();
     }
 

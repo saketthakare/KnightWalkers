@@ -45,8 +45,8 @@ public class PlayerHealth : MonoBehaviour {
     public void TakeDamage(int amount){
         if (this.currentHealth <= 0)
         {
-            //Destroy(sphere.gameObject);
-            //GM.horizontalVelocity = 0;
+            Destroy(sphere.gameObject);
+            GM.horizontalVelocity = 0;
             SceneManager.LoadScene("LevelComplete");
         }
 
