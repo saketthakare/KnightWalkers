@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class Fire : MonoBehaviour, IObstacle {
+public class Fire : MonoBehaviour, IObject {
 
     sphere player;
     public GameObject obj;
@@ -20,7 +20,7 @@ public class Fire : MonoBehaviour, IObstacle {
 
     private void OnCollisionEnter(Collision other)
     {
-        notifyPlayer();
+        notifyPlayer("lethal");
     }
 
 
@@ -29,8 +29,8 @@ public class Fire : MonoBehaviour, IObstacle {
         this.player = player;
     }
     
-    public void notifyPlayer()
+    public void notifyPlayer(String objectType)
     {
-        player.updateSphere();
+        player.updateSphere(objectType);
     }
 } 

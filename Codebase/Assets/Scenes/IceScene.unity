@@ -181,9 +181,11 @@ MonoBehaviour:
   laneNo: 0
   fireObj: {fileID: 1154433961210866, guid: a71c6335303f26f45a9ed20c7fe9064e, type: 2}
   fenceObj: {fileID: 1957370157551532, guid: f061224539601254fb25eedd334c8586, type: 2}
+  capsuleObj: {fileID: 1139451940057074, guid: e36b55280ad53474e842eba32a1216bb, type: 2}
   player: {fileID: 678057471}
   newfenceobject: {fileID: 0}
   newfireobject: {fileID: 0}
+  newcapsuleobject: {fileID: 0}
 --- !u!1 &147203166
 GameObject:
   m_ObjectHideFlags: 0
@@ -1349,7 +1351,7 @@ TextMesh:
   m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   m_Color:
     serializedVersion: 2
-    rgba: 4293007892
+    rgba: 4294967295
 --- !u!23 &2045830139
 MeshRenderer:
   m_ObjectHideFlags: 0

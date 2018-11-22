@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FenceFactory : IObstacleFactory 
+public class FenceFactory : IObjectFactory 
 {
-	public IObstacle createObstacle(GameObject fence,float x, float y, float z)
+	public IObject createObstacle(GameObject fence,float x, float y, float z)
 	{
 		GameObject o =  MonoBehaviour.Instantiate(fence,new Vector3(x,y,z),Quaternion.Euler(0, 90, 0)) as GameObject;	
 		Fence fenceScript = o.AddComponent<Fence>();
 
-		IObstacle obs = fenceScript;
+		IObject obs = fenceScript;
 		return obs;
 	}
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using System;
 
 public class sphere : MonoBehaviour, ISphereSubject, ISphereObserver {
 
@@ -61,12 +62,12 @@ public class sphere : MonoBehaviour, ISphereSubject, ISphereObserver {
     
     private void OnCollisionEnter(Collision other)
     {
-        if(other.gameObject.tag == "boost")
-        {
-            Destroy(other.gameObject);
-            GM.horizontalVelocity = 25;
-            StartCoroutine(stopBoost());
-        }
+        // if(other.gameObject.tag == "boost")
+        // {
+        //     Destroy(other.gameObject);
+        //     GM.horizontalVelocity = 25;
+        //     StartCoroutine(stopBoost());
+        // }
     }
 
     IEnumerator stopSlide()
@@ -82,13 +83,25 @@ public class sphere : MonoBehaviour, ISphereSubject, ISphereObserver {
 		GM.horizontalVelocity = 12;		
     }
 
-    public void updateSphere()
+    public void attach(IObject o)
     {
-        notifyObserver();
+
+    }
+
+    public void updateSphere(String objectType)
+    {
+        if(objectType == "lethal")
+        {
+            notifyObserver();
+        }
+        else if(objectType == "boost")
+        {
+            GM.horizontalVelocity = 25;
+            StartCoroutine(stopBoost());
+        }
     }
 
     public void notifyObserver(){
         playerHealth.TakeDamage(collisionDamage);
     }
-
 }
