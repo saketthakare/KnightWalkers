@@ -20,19 +20,16 @@ public class Fence : MonoBehaviour, IObstacle {
 
     private void OnCollisionEnter(Collision other)
     {
-        // Debug.Log("Fence OnCollisionEnter");
         notifyPlayer();
     }
 
     public void notifyPlayer()
     {
-        // Debug.Log("Fence notify Player");
-        player.destroyObject();
+        player.updateSphere();
     }
 
     public void attachPlayer(sphere player)
     {
-        // Debug.Log("Fence attach Player");
         this.player = player;
     }
 } 

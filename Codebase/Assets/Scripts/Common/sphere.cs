@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
-public class sphere : MonoBehaviour {
+public class sphere : MonoBehaviour, ISphereSubject, ISphereObserver {
 
     public KeyCode moveL;
     public KeyCode moveR;
@@ -61,12 +61,6 @@ public class sphere : MonoBehaviour {
     
     private void OnCollisionEnter(Collision other)
     {
-        //if(other.gameObject.tag == "lethal")
-        //{
-        //    Destroy(gameObject);
-        //    GM.horizontalVelocity = 0;
-        //}
-        //else
         if(other.gameObject.tag == "boost")
         {
             Destroy(other.gameObject);
@@ -88,14 +82,10 @@ public class sphere : MonoBehaviour {
 		GM.horizontalVelocity = 12;		
     }
 
-    public void destroyObject()
+    public void updateSphere()
     {
-        //Destroy(this.gameObject);
-        //GM.horizontalVelocity = 0;
         notifyObserver();
     }
-
-
 
     public void notifyObserver(){
         playerHealth.TakeDamage(collisionDamage);
