@@ -18,6 +18,7 @@ public class HomeMenu : MonoBehaviour, IHomeMenu
     public Button quitButton, settingsButton, helpButton, playButton, characterSelectionButton;
 
     void Start(){
+        player.GetComponent<RawImage>().texture = GetTexture();
         quitButton.onClick.AddListener(quitCommand.Execute);
         settingsButton.onClick.AddListener(settingsCommand.Execute);
         helpButton.onClick.AddListener(helpCommand.Execute);
