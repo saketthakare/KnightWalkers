@@ -74,9 +74,13 @@ public class IceScene : MonoBehaviour {
 				}	
 			}
 
-			Instantiate(wall_l,new Vector3(-11,6,zWallPos),wall_l.rotation);
-			Instantiate(wall_r,new Vector3(10,4,zWallPos),wall_r.rotation);
-			zWallPos += 36;			
+			if((zWallPos-zPlayerPos)<300)
+			{
+				Instantiate(wall_l,new Vector3(-11,6,zWallPos),wall_l.rotation);
+				Instantiate(wall_r,new Vector3(10,4,zWallPos),wall_r.rotation);
+				zWallPos += 36;
+			}
+
 
 			if((zObjPos-zPlayerPos)  < 300)
 			{
