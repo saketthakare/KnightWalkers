@@ -7,15 +7,17 @@ public class IceScene : MonoBehaviour {
     
     public float zScenePos = 216;
     public float zObjPos = 20;
+	public float zWallPos = 0;
     public float zPlayerPos;
     
     public Transform base1;
     public Transform base2;
+	public Transform wall_l;
+	public Transform wall_r;
     
     public Transform capsule;
     public Transform fence;
     public Transform fire;
-    public Transform fire2;
     
     public int randNo;
     public int randObj;
@@ -37,7 +39,16 @@ public class IceScene : MonoBehaviour {
 		Instantiate(base1,new Vector3(0,0,72),base1.rotation);
 		Instantiate(base2,new Vector3(0,0,108),base1.rotation);
 		Instantiate(base2,new Vector3(0,0,144),base1.rotation);
-		Instantiate(base1,new Vector3(0,0,180),base1.rotation);	
+		Instantiate(base1,new Vector3(0,0,180),base1.rotation);
+
+		//Instantiate(wall_l,new Vector3(-11,6,0),wall_l.rotation);
+		//Instantiate(wall_l,new Vector3(-11,6,36),wall_l.rotation);
+		//Instantiate(wall_l,new Vector3(-11,6,72),wall_l.rotation);
+
+		//Instantiate(wall_r,new Vector3(10,4,0),wall_r.rotation);
+		//Instantiate(wall_r,new Vector3(10,4,36),wall_r.rotation);
+		//Instantiate(wall_r,new Vector3(10,4,72),wall_r.rotation);
+
 	}
 	
 	void Update () {
@@ -62,7 +73,10 @@ public class IceScene : MonoBehaviour {
 					zScenePos += 36;
 				}	
 			}
-			
+
+			Instantiate(wall_l,new Vector3(-11,6,zWallPos),wall_l.rotation);
+			Instantiate(wall_r,new Vector3(10,4,zWallPos),wall_r.rotation);
+			zWallPos += 36;			
 
 			if((zObjPos-zPlayerPos)  < 300)
 			{
