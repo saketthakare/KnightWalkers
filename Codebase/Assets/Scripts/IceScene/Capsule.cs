@@ -10,8 +10,8 @@ public class Capsule : MonoBehaviour, IObject {
 
     private void Awake()
     {
-        obj = this.gameObject;
-        // player = this.GetComponent<sphere>();
+        obj = this.gameObject;  
+        // player = this.GetComponent<sphere>();      
     }
     
     private void Start() 

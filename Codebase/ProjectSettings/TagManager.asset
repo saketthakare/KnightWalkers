@@ -9,7 +9,6 @@ TagManager:
   - SettingsMenu
   - MainMenu
   - CharacterSelectionMenu
-  - PlayCharacter
   layers:
   - Default
   - TransparentFX
