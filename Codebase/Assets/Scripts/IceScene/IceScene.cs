@@ -14,11 +14,7 @@ public class IceScene : MonoBehaviour {
     public Transform base2;
 	public Transform wall_l;
 	public Transform wall_r;
-    
-    public Transform capsule;
-    public Transform fence;
-    public Transform fire;
-    
+        
     public int randNo;
     public int randObj;
     public int randLane;
@@ -27,11 +23,13 @@ public class IceScene : MonoBehaviour {
 	public GameObject fireObj;
 	public GameObject fenceObj;
 	public GameObject capsuleObj;
+	public GameObject coinObj;
 	public GameObject player;
 
 	public Fence newfenceobject;
 	public Fire newfireobject;
 	public Capsule newcapsuleobject;
+	public Coin newcoinobject;
 
 	IObjectFactory objfact;
     
@@ -40,14 +38,6 @@ public class IceScene : MonoBehaviour {
 		Instantiate(base2,new Vector3(0,0,108),base1.rotation);
 		Instantiate(base2,new Vector3(0,0,144),base1.rotation);
 		Instantiate(base1,new Vector3(0,0,180),base1.rotation);
-
-		//Instantiate(wall_l,new Vector3(-11,6,0),wall_l.rotation);
-		//Instantiate(wall_l,new Vector3(-11,6,36),wall_l.rotation);
-		//Instantiate(wall_l,new Vector3(-11,6,72),wall_l.rotation);
-
-		//Instantiate(wall_r,new Vector3(10,4,0),wall_r.rotation);
-		//Instantiate(wall_r,new Vector3(10,4,36),wall_r.rotation);
-		//Instantiate(wall_r,new Vector3(10,4,72),wall_r.rotation);
 
 	}
 	
@@ -85,7 +75,7 @@ public class IceScene : MonoBehaviour {
 			if((zObjPos-zPlayerPos)  < 300)
 			{
 			
-				randObj = UnityEngine.Random.Range(0,50);
+				randObj = UnityEngine.Random.Range(0,80);
 				randLane = UnityEngine.Random.Range(1,4);
 				
 				if(randLane==1)
@@ -119,7 +109,7 @@ public class IceScene : MonoBehaviour {
 					
 					zObjPos += randObj;
 				}
-				else if(randObj>45)
+				else if(randObj>45 && randObj<=55)
 				{
 					objfact = new CapsuleFactory();
 
@@ -129,6 +119,18 @@ public class IceScene : MonoBehaviour {
 					capsuleCollider.isTrigger = true;
 					
 					newcapsuleobject.attachPlayer(player.GetComponent<sphere>());
+					zObjPos += 25;
+				}
+				else if(randObj>55 && randObj<=70)
+				{
+					objfact = new CoinFactory();
+
+					newcoinobject = (Coin)objfact.createObstacle(coinObj,laneNo,1.5f,zObjPos);
+					// Instantiate(capsule,new Vector3(laneNo,1,zObjPos),capsule.rotation);
+					CapsuleCollider coinCollider = newcoinobject.obj.AddComponent<CapsuleCollider>();
+					coinCollider.isTrigger = true;
+					
+					newcoinobject.attachPlayer(player.GetComponent<sphere>());
 					zObjPos += 25;
 				}
 			}

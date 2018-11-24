@@ -99,6 +99,10 @@ public class sphere : MonoBehaviour, ISphereSubject, ISphereObserver {
             GM.horizontalVelocity = 30;
             StartCoroutine(stopBoost());
         }
+        else if(objectType == "coin")
+        {
+             GM.coinTotal += 10;
+        }
     }
 
     public void notifyObserver(){

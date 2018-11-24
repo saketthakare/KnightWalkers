@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.33203015, g: 0.59812933, b: 0.7412856, a: 1}
+  m_IndirectSpecularColor: {r: 0.33203033, g: 0.5981299, b: 0.7412864, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -174,9 +174,6 @@ MonoBehaviour:
   base2: {fileID: 4001575723476912, guid: 7cd95770c0b275448b57e81fb9e26b13, type: 2}
   wall_l: {fileID: 4901645297149486, guid: 94c3574244c047c48a857b4b2f66c928, type: 2}
   wall_r: {fileID: 4231103667291148, guid: c31765f4dfeab884181ff38893f7adb3, type: 2}
-  capsule: {fileID: 4056157319087364, guid: e36b55280ad53474e842eba32a1216bb, type: 2}
-  fence: {fileID: 4974033896052948, guid: f061224539601254fb25eedd334c8586, type: 2}
-  fire: {fileID: 4350983430382110, guid: a71c6335303f26f45a9ed20c7fe9064e, type: 2}
   randNo: 0
   randObj: 0
   randLane: 0
@@ -184,10 +181,12 @@ MonoBehaviour:
   fireObj: {fileID: 1154433961210866, guid: a71c6335303f26f45a9ed20c7fe9064e, type: 2}
   fenceObj: {fileID: 1957370157551532, guid: f061224539601254fb25eedd334c8586, type: 2}
   capsuleObj: {fileID: 1139451940057074, guid: e36b55280ad53474e842eba32a1216bb, type: 2}
-  player: {fileID: 1134257498}
+  coinObj: {fileID: 1655847389302358, guid: a6ba95acfa7625345a1799023f688959, type: 2}
+  player: {fileID: 678057471}
   newfenceobject: {fileID: 0}
   newfireobject: {fileID: 0}
   newcapsuleobject: {fileID: 0}
+  newcoinobject: {fileID: 0}
 --- !u!1 &147203166
 GameObject:
   m_ObjectHideFlags: 0
@@ -1425,15 +1424,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400132, guid: e6d4fdfaf941d46b29e286d456e91a41, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.03
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 400132, guid: e6d4fdfaf941d46b29e286d456e91a41, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.03
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 400132, guid: e6d4fdfaf941d46b29e286d456e91a41, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.03
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: e6d4fdfaf941d46b29e286d456e91a41, type: 3}
       propertyPath: m_Controller
@@ -1605,7 +1604,7 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2130870202}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []

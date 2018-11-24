@@ -24,7 +24,7 @@ public class Capsule : MonoBehaviour, IObject {
         notifyPlayer("boost");
     }
 
-    public void notifyPlayer(String objectType)
+    public void notifyPlayer(string objectType)
     {
         destroyCapsule();
         player.updateSphere(objectType);
