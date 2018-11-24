@@ -8,7 +8,6 @@ using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour, IHealthObserver {
 
     public int startHealth = 100;
-    public int healthBoostAmount = 10;
     public int currentHealth;
     public Slider healthSlider;
     public Image damageImage;
@@ -62,16 +61,9 @@ public class PlayerHealth : MonoBehaviour, IHealthObserver {
                 Death();
             }
         }
+
     }
-        
-    public void BoostHealth()
-    {
-        if (this.currentHealth <100)
-        {
-            currentHealth += healthBoostAmount;
-            healthSlider.value = currentHealth;
-        }
-    }
+
     private void Death()
     {
         isDead = true;

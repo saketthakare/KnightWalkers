@@ -170,14 +170,11 @@ MonoBehaviour:
   fenceObj: {fileID: 1957370157551532, guid: f061224539601254fb25eedd334c8586, type: 2}
   capsuleObj: {fileID: 1139451940057074, guid: e36b55280ad53474e842eba32a1216bb, type: 2}
   coinObj: {fileID: 1655847389302358, guid: a6ba95acfa7625345a1799023f688959, type: 2}
-  healthPotionObj: {fileID: 1056787855966862, guid: fc36432bc56b642298ba4747ddfbbecd,
-    type: 2}
   player: {fileID: 1134257498}
   newfenceobject: {fileID: 0}
   newfireobject: {fileID: 0}
   newcapsuleobject: {fileID: 0}
   newcoinobject: {fileID: 0}
-  newhealthpotionobject: {fileID: 0}
 --- !u!1 &147203166
 GameObject:
   m_ObjectHideFlags: 0
@@ -721,7 +718,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startHealth: 100
-  healthBoostAmount: 10
   currentHealth: 0
   healthSlider: {fileID: 626961374}
   damageImage: {fileID: 2130870204}
@@ -1028,7 +1024,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startHealth: 100
-  healthBoostAmount: 10
   currentHealth: 0
   healthSlider: {fileID: 626961374}
   damageImage: {fileID: 2130870204}
@@ -1132,7 +1127,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startHealth: 100
-  healthBoostAmount: 10
   currentHealth: 0
   healthSlider: {fileID: 626961374}
   damageImage: {fileID: 2130870204}
