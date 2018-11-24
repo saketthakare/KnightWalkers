@@ -24,12 +24,14 @@ public class IceScene : MonoBehaviour {
 	public GameObject fenceObj;
 	public GameObject capsuleObj;
 	public GameObject coinObj;
+	public GameObject healthPotionObj;
 	public GameObject player;
 
 	public Fence newfenceobject;
 	public Fire newfireobject;
 	public Capsule newcapsuleobject;
 	public Coin newcoinobject;
+	public HealthPotion newhealthpotionobject;
 
 	IObjectFactory objfact;
     
@@ -129,6 +131,18 @@ public class IceScene : MonoBehaviour {
 					coinCollider.isTrigger = true;
 					
 					newcoinobject.attachPlayer(player.GetComponent<sphere>());
+					zObjPos += 25;
+				}
+				else if(randObj>70 && randObj<75 )
+				{
+					objfact = new PotionFactory();
+
+					newhealthpotionobject = (HealthPotion)objfact.createObstacle(healthPotionObj,laneNo,1.5f,zObjPos);
+					// Instantiate(capsule,new Vector3(laneNo,1,zObjPos),capsule.rotation);
+					SphereCollider potionCollider = newhealthpotionobject.obj.AddComponent<SphereCollider>();
+					// potionCollider.isTrigger = true;
+					
+					newhealthpotionobject.attachPlayer(player.GetComponent<sphere>());
 					zObjPos += 25;
 				}
 			}

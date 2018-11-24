@@ -51,23 +51,13 @@ public class sphere : MonoBehaviour, ISphereSubject, ISphereObserver {
     {
         if(other.gameObject.tag == "lethal")
         {
-            notifyObserver();
+            notifyObserver("lethal");
         }
-
-        // if (other.gameObject.name.StartsWith("coin"))
-        // {
-        //     GM.coinTotal += 10;
-        // }
     }
     
     private void OnCollisionEnter(Collision other)
     {
-        // if(other.gameObject.tag == "boost")
-        // {
-        //     Destroy(other.gameObject);
-        //     GM.horizontalVelocity = 25;
-        //     StartCoroutine(stopBoost());
-        // }
+       
     }
 
     IEnumerator stopSlide()
@@ -92,7 +82,7 @@ public class sphere : MonoBehaviour, ISphereSubject, ISphereObserver {
     {
         if(objectType == "lethal")
         {
-            notifyObserver();
+            notifyObserver(objectType);
         }
         else if(objectType == "boost")
         {
@@ -103,9 +93,20 @@ public class sphere : MonoBehaviour, ISphereSubject, ISphereObserver {
         {
              GM.coinTotal += 10;
         }
+        else if(objectType == "healthboost")
+        {
+            notifyObserver(objectType);
+        }
     }
 
-    public void notifyObserver(){
-        playerHealth.TakeDamage(collisionDamage);
+    public void notifyObserver(String objectType){
+        if(objectType == "lethal")
+        {
+            playerHealth.TakeDamage(collisionDamage);
+        }
+        else
+        {
+            playerHealth.BoostHealth();
+        }
     }
 }
