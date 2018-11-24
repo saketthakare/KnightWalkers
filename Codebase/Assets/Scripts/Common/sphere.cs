@@ -14,7 +14,7 @@ public class sphere : MonoBehaviour, ISphereSubject, ISphereObserver {
     public string controllocked = "n";
 
     public PlayerHealth playerHealth;
-    public int collisionDamage = 10;
+    public int collisionDamage = 25;
 
     // Use this for initialization
     void Start () {
@@ -51,7 +51,7 @@ public class sphere : MonoBehaviour, ISphereSubject, ISphereObserver {
     {
         if(other.gameObject.tag == "lethal")
         {
-            notifyObserver();
+            notifyObserver("lethal");
         }
 
         // if (other.gameObject.name.StartsWith("coin"))
@@ -92,7 +92,7 @@ public class sphere : MonoBehaviour, ISphereSubject, ISphereObserver {
     {
         if(objectType == "lethal")
         {
-            notifyObserver();
+            notifyObserver(objectType);
         }
         else if(objectType == "boost")
         {
@@ -103,9 +103,20 @@ public class sphere : MonoBehaviour, ISphereSubject, ISphereObserver {
         {
              GM.coinTotal += 10;
         }
+        else if(objectType == "healthboost")
+        {
+            notifyObserver(objectType);
+        }
     }
 
-    public void notifyObserver(){
-        playerHealth.TakeDamage(collisionDamage);
+    public void notifyObserver(String objectType){
+        if(objectType == "lethal")
+        {
+            playerHealth.TakeDamage(collisionDamage);
+        }
+        else
+        {
+            playerHealth.BoostHealth();
+        }
     }
 }
