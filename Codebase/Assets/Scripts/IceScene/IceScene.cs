@@ -31,7 +31,10 @@ public class IceScene : MonoBehaviour {
 	public Capsule newcapsuleobject;
 	public Coin newcoinobject;
 
-	IObjectFactory objfact;
+    private GameObject[] characterList;
+    private GameController gameController = GameController.GetInstance();
+
+    IObjectFactory objfact;
     
     void Start () {
 		Instantiate(base1,new Vector3(0,0,72),base1.rotation);
@@ -40,10 +43,31 @@ public class IceScene : MonoBehaviour {
 		Instantiate(base1,new Vector3(0,0,180),base1.rotation);
 
 	}
-	
-	void Update () {
+
+    private void Awake()
+    {
+        Transform trans = GameObject.Find("Player").transform;
+        int characterCount = trans.childCount;
+        characterList = new GameObject[characterCount];
+
+        for (int i = 0; i < characterCount; i++)
+            characterList[i] = trans.GetChild(i).gameObject;
+
+        foreach (GameObject obj in characterList)
+            obj.SetActive(false);
+
+        string playCharacter = gameController.GetPlayer();
+        if (playCharacter == "john")
+            GameObject.Find("Player").transform.Find("Hound").gameObject.SetActive(true);
+        if (playCharacter == "hound")
+            GameObject.Find("Player").transform.Find("Hound").gameObject.SetActive(true);
+        if (playCharacter == "tyrion")
+            GameObject.Find("Player").transform.Find("Tyrion").gameObject.SetActive(true);
+    }
+
+    void Update () {
 		
-		GameObject gobj = GameObject.Find("Player");
+		GameObject gobj = GameObject.FindWithTag("PlayCharacter");
 		if(gobj != null)
 		{
 			zPlayerPos =gobj.GetComponent<Transform>().position.z;
@@ -88,7 +112,7 @@ public class IceScene : MonoBehaviour {
 				if(randObj>15 && randObj<=25)
 				{
 					objfact = new FireFactory();
-					newfireobject = (Fire)objfact.createObstacle(fireObj,laneNo,1.5f,zObjPos);
+					newfireobject = (Fire)objfact.createObstacle(fireObj,laneNo, 1, zObjPos);
 
 					BoxCollider fireBoxCollider = newfireobject.obj.AddComponent<BoxCollider>();
 					fireBoxCollider.isTrigger = true;
@@ -112,8 +136,9 @@ public class IceScene : MonoBehaviour {
 				else if(randObj>45 && randObj<=55)
 				{
 					objfact = new CapsuleFactory();
-					newcapsuleobject = (Capsule)objfact.createObstacle(capsuleObj,laneNo,1,zObjPos);
 
+					newcapsuleobject = (Capsule)objfact.createObstacle(capsuleObj,laneNo,1,zObjPos);
+					// Instantiate(capsule,new Vector3(laneNo,1,zObjPos),capsule.rotation);
 					CapsuleCollider capsuleCollider = newcapsuleobject.obj.AddComponent<CapsuleCollider>();
 					capsuleCollider.isTrigger = true;
 					
@@ -123,8 +148,9 @@ public class IceScene : MonoBehaviour {
 				else if(randObj>55 && randObj<=70)
 				{
 					objfact = new CoinFactory();
+
 					newcoinobject = (Coin)objfact.createObstacle(coinObj,laneNo,1.5f,zObjPos);
-					
+					// Instantiate(capsule,new Vector3(laneNo,1,zObjPos),capsule.rotation);
 					CapsuleCollider coinCollider = newcoinobject.obj.AddComponent<CapsuleCollider>();
 					coinCollider.isTrigger = true;
 					
