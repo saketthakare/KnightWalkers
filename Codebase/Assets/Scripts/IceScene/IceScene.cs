@@ -112,9 +112,8 @@ public class IceScene : MonoBehaviour {
 				else if(randObj>45 && randObj<=55)
 				{
 					objfact = new CapsuleFactory();
-
 					newcapsuleobject = (Capsule)objfact.createObstacle(capsuleObj,laneNo,1,zObjPos);
-					// Instantiate(capsule,new Vector3(laneNo,1,zObjPos),capsule.rotation);
+
 					CapsuleCollider capsuleCollider = newcapsuleobject.obj.AddComponent<CapsuleCollider>();
 					capsuleCollider.isTrigger = true;
 					
@@ -124,9 +123,8 @@ public class IceScene : MonoBehaviour {
 				else if(randObj>55 && randObj<=70)
 				{
 					objfact = new CoinFactory();
-
 					newcoinobject = (Coin)objfact.createObstacle(coinObj,laneNo,1.5f,zObjPos);
-					// Instantiate(capsule,new Vector3(laneNo,1,zObjPos),capsule.rotation);
+					
 					CapsuleCollider coinCollider = newcoinobject.obj.AddComponent<CapsuleCollider>();
 					coinCollider.isTrigger = true;
 					

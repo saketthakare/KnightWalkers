@@ -54,10 +54,10 @@ public class sphere : MonoBehaviour, ISphereSubject, ISphereObserver {
             notifyObserver();
         }
 
-        if (other.gameObject.name.StartsWith("coin"))
-        {
-            GM.coinTotal += 10;
-        }
+        // if (other.gameObject.name.StartsWith("coin"))
+        // {
+        //     GM.coinTotal += 10;
+        // }
     }
     
     private void OnCollisionEnter(Collision other)
