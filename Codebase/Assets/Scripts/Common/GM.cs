@@ -5,7 +5,7 @@ using UnityEngine;
 public class GM : MonoBehaviour {
 
     public static float verticalVelocity = 0;
-    public static float horizontalVelocity = 12;
+    public static float horizontalVelocity = 20;
 
     public static int coinTotal = 0;
     public static float totalTime = 0;

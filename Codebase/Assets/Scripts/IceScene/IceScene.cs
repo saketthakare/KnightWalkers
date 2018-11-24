@@ -53,7 +53,7 @@ public class IceScene : MonoBehaviour {
 	
 	void Update () {
 		
-		GameObject gobj = GameObject.Find("Sphere");
+		GameObject gobj = GameObject.Find("Player");
 		if(gobj != null)
 		{
 			zPlayerPos =gobj.GetComponent<Transform>().position.z;

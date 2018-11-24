@@ -80,7 +80,7 @@ public class sphere : MonoBehaviour, ISphereSubject, ISphereObserver {
     IEnumerator stopBoost()
     {
 		yield return new WaitForSeconds(8);
-		GM.horizontalVelocity = 12;		
+		GM.horizontalVelocity = 20;		
     }
 
     public void attach(IObject o)
@@ -96,7 +96,7 @@ public class sphere : MonoBehaviour, ISphereSubject, ISphereObserver {
         }
         else if(objectType == "boost")
         {
-            GM.horizontalVelocity = 25;
+            GM.horizontalVelocity = 30;
             StartCoroutine(stopBoost());
         }
     }
