@@ -15,8 +15,7 @@ public class stats : MonoBehaviour {
             GetComponent<UnityEngine.UI.Text>().text = "Coins : " + GM.coinTotal.ToString("0");
         if (gameObject.name == "ScoreTotal")
             GetComponent<UnityEngine.UI.Text>().text = "Score : " + (GM.totalTime*105 + GM.coinTotal*2).ToString("0");
-        if (gameObject.name == "TotalCost")
-            GetComponent<UnityEngine.UI.Text>().text = "Cost : " + GM.coinTotal.ToString("0");
+       
        
     }
 }
