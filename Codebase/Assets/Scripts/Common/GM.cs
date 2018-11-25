@@ -16,7 +16,11 @@ public class GM : MonoBehaviour {
     
     public Transform base1;
     public Transform base2;
+    
+    // Use this for initialization
 
+    void Start () {
+	}
 	
 	// Update is called once per frame
 	void Update () {

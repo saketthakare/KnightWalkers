@@ -49,11 +49,8 @@ public class IceScene : MonoBehaviour {
 		if(gobj != null)
 		{
 			zPlayerPos =gobj.GetComponent<Transform>().position.z;
-
-            if (gameObject.name == "TimeText"){
-                GetComponent<UnityEngine.UI.Text>().text = "Time: " + Math.Round(GM.totalTime, 3);
-            }
-            if ((zScenePos-zPlayerPos)  < 300)
+			
+			if((zScenePos-zPlayerPos)  < 300)
 			{
 				randNo = UnityEngine.Random.Range(0,10);
 				
