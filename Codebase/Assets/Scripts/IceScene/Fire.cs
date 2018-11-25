@@ -20,7 +20,11 @@ public class Fire : MonoBehaviour, IObject {
 
     private void OnCollisionEnter(Collision other)
     {
-        notifyPlayer("lethal");
+        if(other.gameObject.name == "Player")
+        {
+            Destroy(this.gameObject);
+            notifyPlayer("lethal");
+        }
     }
 
 
@@ -31,6 +35,7 @@ public class Fire : MonoBehaviour, IObject {
     
     public void notifyPlayer(String objectType)
     {
+        Debug.Log("Touched Fire");
         player.updateSphere(objectType);
     }
 } 

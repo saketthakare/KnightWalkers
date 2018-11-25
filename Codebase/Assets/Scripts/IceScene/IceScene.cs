@@ -93,7 +93,7 @@ public class IceScene : MonoBehaviour {
 					newfireobject = (Fire)objfact.createObstacle(fireObj,laneNo,1.5f,zObjPos);
 
 					BoxCollider fireBoxCollider = newfireobject.obj.AddComponent<BoxCollider>();
-					fireBoxCollider.isTrigger = true;
+					// fireBoxCollider.isTrigger = true;
 
 					newfireobject.attachPlayer(player.GetComponent<sphere>());
 					
@@ -105,7 +105,7 @@ public class IceScene : MonoBehaviour {
 					newfenceobject = (Fence)objfact.createObstacle(fenceObj,laneNo,0.75f,zObjPos);
 
 					BoxCollider fenceBoxCollider = newfenceobject.obj.AddComponent<BoxCollider>();
-					fenceBoxCollider.isTrigger = true;
+					// fenceBoxCollider.isTrigger = true;
 					
 					newfenceobject.attachPlayer(player.GetComponent<sphere>());
 					
@@ -117,7 +117,7 @@ public class IceScene : MonoBehaviour {
 					newcapsuleobject = (Capsule)objfact.createObstacle(capsuleObj,laneNo,1,zObjPos);
 
 					CapsuleCollider capsuleCollider = newcapsuleobject.obj.AddComponent<CapsuleCollider>();
-					capsuleCollider.isTrigger = true;
+					// capsuleCollider.isTrigger = true;
 					
 					newcapsuleobject.attachPlayer(player.GetComponent<sphere>());
 					zObjPos += 25;
@@ -128,7 +128,7 @@ public class IceScene : MonoBehaviour {
 					newcoinobject = (Coin)objfact.createObstacle(coinObj,laneNo,1.5f,zObjPos);
 					
 					CapsuleCollider coinCollider = newcoinobject.obj.AddComponent<CapsuleCollider>();
-					coinCollider.isTrigger = true;
+					// coinCollider.isTrigger = true;
 					
 					newcoinobject.attachPlayer(player.GetComponent<sphere>());
 					zObjPos += 25;

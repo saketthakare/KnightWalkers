@@ -14,22 +14,16 @@ public class sphere : MonoBehaviour, ISphereSubject, ISphereObserver {
     public string controllocked = "n";
 
     public PlayerHealth playerHealth;
-    public int collisionDamage = 10;
-
-    // Use this for initialization
-    void Start () {
-
-	}
+    public int collisionDamage = 25;
 
     private void Awake()
     {
         playerHealth = this.GetComponent<PlayerHealth>();
     }
 
-    // Update is called once per frame
     void Update () {
         GetComponent<Rigidbody>().velocity = new Vector3(horizVel, GM.verticalVelocity, GM.horizontalVelocity);
-
+        GM.totalTime += Time.deltaTime;
         if(Input.GetKeyDown(moveL) && laneNum > 1 && controllocked == "n")
         {
             horizVel = -3;
@@ -49,10 +43,10 @@ public class sphere : MonoBehaviour, ISphereSubject, ISphereObserver {
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "lethal")
-        {
-            notifyObserver("lethal");
-        }
+        // if(other.gameObject.tag == "lethal")
+        // {
+        //     notifyObserver("lethal");
+        // }
     }
     
     private void OnCollisionEnter(Collision other)

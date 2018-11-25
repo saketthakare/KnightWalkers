@@ -20,11 +20,16 @@ public class Fence : MonoBehaviour, IObject {
 
     private void OnCollisionEnter(Collision other)
     {
-        notifyPlayer("lethal");
+        if(other.gameObject.name == "Player")
+        {
+            Destroy(this.gameObject);
+            notifyPlayer("lethal");
+        }
     }
 
     public void notifyPlayer(String objectType)
     {
+        Debug.Log("Touched Fence");
         player.updateSphere(objectType);
     }
 

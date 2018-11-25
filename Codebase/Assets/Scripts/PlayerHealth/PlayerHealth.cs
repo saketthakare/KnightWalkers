@@ -26,13 +26,6 @@ public class PlayerHealth : MonoBehaviour, IHealthObserver {
         sphere = this.GetComponent<sphere>();
     }
 
-
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
 	void Update () {
         if(damaged){
             damageImage.color = flashColor;
@@ -54,6 +47,7 @@ public class PlayerHealth : MonoBehaviour, IHealthObserver {
         if (this.currentHealth > 0)
         {
             damaged = true;
+            Debug.Log("Current Health : "+currentHealth);
             currentHealth -= amount;
             healthSlider.value = currentHealth;
 
