@@ -25,7 +25,7 @@ public class IceScene : MonoBehaviour {
 	public GameObject capsuleObj;
 	public GameObject coinObj;
 	public GameObject healthPotionObj;
-	public GameObject player;
+	private GameObject player;
 
 	public Fence newfenceobject;
 	public Fire newfireobject;
@@ -33,8 +33,42 @@ public class IceScene : MonoBehaviour {
 	public Coin newcoinobject;
 	public HealthPotion newhealthpotionobject;
 
+ 	private GameObject[] characterList;
+    private GameController gameController = GameController.GetInstance();
+
 	IObjectFactory objfact;
     
+	private void Awake()
+    {
+        Transform trans = GameObject.Find("Player").transform;
+
+        int characterCount = trans.childCount;
+        characterList = new GameObject[characterCount];
+
+        for (int i = 0; i < characterCount; i++)
+            characterList[i] = trans.GetChild(i).gameObject;
+
+        foreach (GameObject obj in characterList)
+            obj.SetActive(false);
+
+        string playCharacter = gameController.GetPlayer();
+        if (playCharacter == "john")
+		{
+            GameObject.Find("Player").transform.Find("Hound").gameObject.SetActive(true);
+			player = GameObject.Find("Player").transform.Find("Hound").gameObject;
+		}
+        if (playCharacter == "hound")
+		{
+            GameObject.Find("Player").transform.Find("Hound").gameObject.SetActive(true);
+			player = GameObject.Find("Player").transform.Find("Hound").gameObject;
+		}
+        if (playCharacter == "tyrion")
+		{
+            GameObject.Find("Player").transform.Find("Tyrion").gameObject.SetActive(true);
+			player = GameObject.Find("Player").transform.Find("Tyrion").gameObject;
+		}
+    }
+
     void Start () {
 		Instantiate(base1,new Vector3(0,0,72),base1.rotation);
 		Instantiate(base2,new Vector3(0,0,108),base1.rotation);
@@ -45,7 +79,7 @@ public class IceScene : MonoBehaviour {
 	
 	void Update () {
 		
-		GameObject gobj = GameObject.Find("Player");
+		GameObject gobj = GameObject.FindWithTag("PlayCharacter");
 		if(gobj != null)
 		{
 			zPlayerPos =gobj.GetComponent<Transform>().position.z;

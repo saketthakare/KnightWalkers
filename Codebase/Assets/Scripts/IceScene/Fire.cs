@@ -20,7 +20,7 @@ public class Fire : MonoBehaviour, IObject {
 
     private void OnCollisionEnter(Collision other)
     {
-        if(other.gameObject.name == "Player")
+        if(other.gameObject.tag == "PlayCharacter")
         {
             Destroy(this.gameObject);
             notifyPlayer("lethal");
