@@ -750,7 +750,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &338061482
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4115,13 +4115,14 @@ GameObject:
   - component: {fileID: 1866638943}
   - component: {fileID: 1866638942}
   - component: {fileID: 1866638944}
+  - component: {fileID: 1866638945}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: MainMenu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1866638941
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4188,18 +4189,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 1866638940}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea835619250da444fba857327ba4e95c, type: 3}
+  m_Script: {fileID: 11500000, guid: 0547ecdf2c79643c4a6568aa0d01857f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quitButton: {fileID: 665096039}
+  settingsButton: {fileID: 1663537680}
+  helpButton: {fileID: 1676532636}
+  playButton: {fileID: 274742236}
+  characterSelectionButton: {fileID: 1512772638}
+  homeButton: {fileID: 0}
+--- !u!114 &1866638945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1866638940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4acb3f5c5ac846baa171f27fe39f417, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1940993644}
   john: {fileID: 2800000, guid: 05f960ad5826342c3a55c52e1bb77f08, type: 3}
   hound: {fileID: 2800000, guid: 0fdc5497a480947b883e7cbc9ab8445d, type: 3}
   tyrion: {fileID: 2800000, guid: b340bcfffe99847da824ff09141a1144, type: 3}
-  quitButton: {fileID: 665096039}
-  settingsButton: {fileID: 1663537680}
-  helpButton: {fileID: 1676532636}
-  playButton: {fileID: 274742236}
-  characterSelectionButton: {fileID: 1512772638}
 --- !u!1 &1868376679
 GameObject:
   m_ObjectHideFlags: 0
