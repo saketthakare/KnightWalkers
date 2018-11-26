@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.33203065, g: 0.5981301, b: 0.74128664, a: 1}
+  m_IndirectSpecularColor: {r: 0.33203015, g: 0.59812933, b: 0.7412856, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -158,7 +158,7 @@ MonoBehaviour:
   zObjPos: 20
   zWallPos: 0
   zPlayerPos: 0
-  base1: {fileID: 4697641115914710, guid: 4ab7ecc6cfd5e7842be2009adcb6c0d4, type: 2}
+  base1: {fileID: 4114602423151052, guid: 5eb61c88ecb254dddbb61a8816b6d3c0, type: 2}
   base2: {fileID: 4001575723476912, guid: 7cd95770c0b275448b57e81fb9e26b13, type: 2}
   wall_l: {fileID: 4901645297149486, guid: 94c3574244c047c48a857b4b2f66c928, type: 2}
   wall_r: {fileID: 4231103667291148, guid: c31765f4dfeab884181ff38893f7adb3, type: 2}
@@ -1725,7 +1725,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400132, guid: e6d4fdfaf941d46b29e286d456e91a41, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.025
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 400132, guid: e6d4fdfaf941d46b29e286d456e91a41, type: 3}
       propertyPath: m_LocalScale.y
@@ -1733,7 +1733,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400132, guid: e6d4fdfaf941d46b29e286d456e91a41, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.025
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 100132, guid: e6d4fdfaf941d46b29e286d456e91a41, type: 3}
       propertyPath: m_TagString
@@ -1780,7 +1780,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 25, y: 150, z: 20}
+  m_Size: {x: 25, y: 150, z: 0}
   m_Center: {x: 0, y: 70, z: 0}
 --- !u!54 &1529461427
 Rigidbody:
@@ -1789,9 +1789,9 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1529461424}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 1000
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
