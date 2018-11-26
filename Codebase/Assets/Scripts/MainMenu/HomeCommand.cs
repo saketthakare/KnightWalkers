@@ -9,5 +9,7 @@ public class HomeCommand : ICommand
     public void Execute()
     {
         SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+        GM.coinTotal = 0;
+        GM.totalTime = 0;
     }
 }
