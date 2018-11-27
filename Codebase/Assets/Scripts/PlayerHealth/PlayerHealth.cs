@@ -12,6 +12,7 @@ public class PlayerHealth : MonoBehaviour, IHealthObserver {
     public int currentHealth;
     public Slider healthSlider;
     public Image damageImage;
+    public AudioSource audioSource;
     public float flashSpeed = 5f;
     public Color flashColor = new Color(1f, 0f, 0f, 0.1f);
 
@@ -24,6 +25,7 @@ public class PlayerHealth : MonoBehaviour, IHealthObserver {
     {
         currentHealth = startHealth;
         sphere = this.GetComponent<sphere>();
+        audioSource = this.GetComponent<AudioSource>();
     }
 
 	void Update () {
@@ -50,7 +52,7 @@ public class PlayerHealth : MonoBehaviour, IHealthObserver {
             Debug.Log("Current Health : "+currentHealth);
             currentHealth -= amount;
             healthSlider.value = currentHealth;
-
+            audioSource.Play();
             if (currentHealth <= 0 && !isDead)
             {
                 Death();
