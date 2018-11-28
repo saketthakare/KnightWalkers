@@ -21,8 +21,19 @@ public class AudioController : MonoBehaviour
         }
         if (musicToggler != null)
         {
+            musicToggler.isOn = gameController.GetMusicOption();
             musicToggler.onValueChanged.AddListener(delegate { ToggleAudio(); });
         }
+    }
+
+    private void Update()
+    {
+        if (musicToggler != null)
+        {
+            musicToggler.isOn = gameController.GetMusicOption();
+        }
+        audioSource.enabled = gameController.GetMusicOption();
+        audioSource.volume = gameController.GetVolume();
     }
 
     private void ToggleAudio()

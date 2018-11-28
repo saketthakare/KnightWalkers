@@ -21,11 +21,16 @@ public class PlayerHealth : MonoBehaviour, IHealthObserver {
 
     public sphere sphere;
 
+    void Start()
+    {
+
+
+    }
+
     private void Awake()
     {
         currentHealth = startHealth;
         sphere = this.GetComponent<sphere>();
-        audioSource = this.GetComponent<AudioSource>();
     }
 
 	void Update () {
@@ -36,7 +41,7 @@ public class PlayerHealth : MonoBehaviour, IHealthObserver {
             damageImage.color = Color.Lerp(damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
         }
         damaged = false;
-	}
+    }
 
     public void TakeDamage(int amount){
         if (this.currentHealth <= 0)
