@@ -1,0 +1,7 @@
+{
+  "name": "Invictus API",
+  "description": "API for leaderboard",
+  "repository": "https://github.com/nguyensjsu/fa18-202-invictus",
+  "logo": "https://rawgit.com/heroku/node-js-sample/master/public/node.svg",
+  "keywords": ["node", "express", "static"]
+}
