@@ -10,12 +10,17 @@ public class stats : MonoBehaviour {
 	void Update () {
 
         if (gameObject.name == "TimeTotal")
-            GetComponent<UnityEngine.UI.Text>().text = "Time : " + GM.totalTime.ToString("0");
+            GetComponent<UnityEngine.UI.Text>().text = "Time :";
+        if (gameObject.name == "TimeTotalText")
+            GetComponent<UnityEngine.UI.Text>().text = GM.totalTime.ToString("0");
         if (gameObject.name == "CoinTotal")
-            GetComponent<UnityEngine.UI.Text>().text = "Coins : " + GM.coinTotal.ToString("0");
+            GetComponent<UnityEngine.UI.Text>().text = "Coins : ";
+        if (gameObject.name == "CoinTotalText")
+            GetComponent<UnityEngine.UI.Text>().text = GM.coinTotal.ToString("0");
         if (gameObject.name == "ScoreTotal")
-            GetComponent<UnityEngine.UI.Text>().text = "Score : " + (GM.totalTime*105 + GM.coinTotal*2).ToString("0");
-       
-       
+            GetComponent<UnityEngine.UI.Text>().text = "Score : ";
+        if (gameObject.name == "ScoreTotalText")
+            GetComponent<UnityEngine.UI.Text>().text = (GM.totalTime * 105 + GM.coinTotal * 2).ToString("0");
+
     }
 }
