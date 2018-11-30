@@ -47,8 +47,7 @@ public class PlayerHealth : MonoBehaviour, IHealthObserver {
         if (this.currentHealth <= 0)
         {
             Destroy(sphere.gameObject);
-            GM.horizontalVelocity = 0;
-            SceneManager.LoadScene("LevelComplete");
+            SceneManager.LoadScene("LevelComplete", LoadSceneMode.Single);
         }
 
         if (this.currentHealth > 0)

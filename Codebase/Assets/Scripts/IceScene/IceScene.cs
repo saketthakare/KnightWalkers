@@ -70,7 +70,9 @@ public class IceScene : MonoBehaviour {
     }
 
     void Start () {
-		Instantiate(base1,new Vector3(0,0,72),base1.rotation);
+        GM.coinTotal = 0;
+        GM.totalTime = 0;
+        Instantiate(base1,new Vector3(0,0,72),base1.rotation);
 		Instantiate(base2,new Vector3(0,0,108),base1.rotation);
 		Instantiate(base2,new Vector3(0,0,144),base1.rotation);
 		Instantiate(base1,new Vector3(0,0,180),base1.rotation);
