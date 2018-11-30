@@ -3,14 +3,13 @@
 const config = require('./config')
 const mysql = require('mysql')
 const bluebird = require('bluebird')
-
 const pool = mysql.createPool({
   connectionLimit: config.sql.connectionLimit,
-  host: config.sql.host,
-  user: config.sql.user,
-  password: config.sql.password,
-  database: config.sql.database,
-  port: config.sql.port,
+  host: 'addhostname',
+  user: 'addusername',
+  password: 'addpassword',
+  database: 'adddatabase',
+  port: 3306,
   debug: false,
   multipleStatements: true
 })
