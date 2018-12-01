@@ -6,7 +6,7 @@ public class GameController
     private float volume;
     private bool musicOption;
     private string player = "john";
-    private string userName = "John Snow";
+    private string userName = "JohnSnow";
     private static GameController instance = null;
 
     private GameController()
