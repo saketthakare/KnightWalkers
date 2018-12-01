@@ -13,6 +13,7 @@ We are building a game named 'KNIGHT WALKERS'. This is an endless running game, 
 ## Links for project artifacts
 - [Scrum Burndown Report](https://docs.google.com/spreadsheets/d/1qdxA9J2GmQgTRxZWQmVfwAh1nfhN67ZLgx6fR960424/edit#gid=0)
 - [Youtube Video](https://www.youtube.com/watch?v=OrZNK9s57qU)
+- [Wireframes](https://github.com/nguyensjsu/fa18-202-invictus/tree/master/Wireframe)
 
 ## Design Patterns
 Following design patterns have been implemented to build the game features-
