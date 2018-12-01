@@ -44,5 +44,9 @@ public class PlayerDisplayer : MonoBehaviour
         {
             GameObject.FindWithTag("PlayerList").transform.Find("tyrion").gameObject.SetActive(true);
         }
+        if (playCharacter == "drogo")
+        {
+            GameObject.FindWithTag("PlayerList").transform.Find("drogo").gameObject.SetActive(true);
+        }
     }
 }

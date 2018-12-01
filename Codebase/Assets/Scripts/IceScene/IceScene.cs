@@ -67,6 +67,11 @@ public class IceScene : MonoBehaviour {
             GameObject.Find("Player").transform.Find("Tyrion").gameObject.SetActive(true);
 			player = GameObject.Find("Player").transform.Find("Tyrion").gameObject;
 		}
+		if (playCharacter == "drogo")
+		{
+            GameObject.Find("Player").transform.Find("Drogo").gameObject.SetActive(true);
+			player = GameObject.Find("Player").transform.Find("Drogo").gameObject;
+		}
     }
 
     void Start () {
