@@ -11,8 +11,8 @@
 We are building a game named 'KNIGHT WALKERS'. This is an endless running game, built on Unity3D game engine. The theme of the game is based on the famous TV series: Game Of Thrones. Player can select from three characters - Hound, Tyrion and Khal Drogo. In the game play, player can collect coins and speed boosts to increase the score, while avoiding obstacles in the form of fire and fences. If the player touches any of these obstacles, his health will be reduced. Lost health can be regained by collecting health potion. Game will end once player loses all of his health. Final score of player will be displayed on the score board after end of game play. We have also implemented a leader board functionality which displays the names of top five scorers, along with the rank as per current game play. For this purpose, we are sending the score for each game play to a node.js server hosted on cloud via APIs. All the scores are stored in cloud hosted MySQL database. 
 
 ## Links for project artifacts
-- Scrum Burndown Report
-- Youtube Video
+- [Scrum Burndown Report](https://docs.google.com/spreadsheets/d/1qdxA9J2GmQgTRxZWQmVfwAh1nfhN67ZLgx6fR960424/edit#gid=0)
+- [Youtube Video](https://www.youtube.com/watch?v=OrZNK9s57qU)
 
 ## Design Patterns
 Following design patterns have been implemented to build the game features-
