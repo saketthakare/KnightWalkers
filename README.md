@@ -27,48 +27,48 @@ Following design patterns have been implemented to build the game features-
 
 - CLass Diagram
 
-![Class-Diag](./Project Reports/UML Diagrams/Class Diagram.png)
+![Class-Diag](./Project%20Reports/UML%20Diagrams/Class Diagram.png)
 
 - Sequence Diagram
 
-![Sequence-Diag](./Project Reports/UML Diagrams/Class Diagram.png)
+![Sequence-Diag](./Project%20Reports/UML%20Diagrams/Class Diagram.png)
 
 - Activity Diagram
 
-![Activity-Diag](./Project Reports/UML Diagrams/Activity Diagram.png)
+![Activity-Diag](./Project%20Reports/UML%20Diagrams/Activity Diagram.png)
 
 - Use Case Diagram
 
-![UseCase-Diag](./Project Reports/UML Diagrams/UseCase.png)
+![UseCase-Diag](./Project%20Reports/UML%20Diagrams/UseCase.png)
 
 ## Game Play Screenshots
 
 - Main Menu
 
-![Main Menu](./Project Reports/Game Screenshots/MainMenu.png)
+![Main Menu](./Project%20Reports/Game%20Screenshots/MainMenu.png)
 
 - Instructions Screen
 
-![Instructions](./Project Reports/Game Screenshots/InstructionsMenu.png)
+![Instructions](./Project%20Reports/Game%20Screenshots/InstructionsMenu.png)
 
 - Audio Settings Screen
 
-![Audio Settings](./Project Reports/Game Screenshots/AudioSettingsMenu.png)
+![Audio Settings](./Project%20Reports/Game%20Screenshots/AudioSettingsMenu.png)
 
 - Character Selection Screen
 
-![Character Selection](./Project Reports/Game Screenshots/CharacterSelectionMenu.png)
+![Character Selection](./Project%20Reports/Game%20Screenshots/CharacterSelectionMenu.png)
 
 - Game Play
 
-![Game Play](./Project Reports/Game Screenshots/GamePlay.png)
+![Game Play](./Project%20Reports/Game%20Screenshots/GamePlay.png)
 
 - Score Board
 
-![Score Board](./Project Reports/Game Screenshots/ScoreBoard.png)
+![Score Board](./Project%20Reports/Game%20Screenshots/ScoreBoard.png)
 
 - Leader Board
 
-![Leader Board](./Project Reports/Game Screenshots/LeaderBoard.png)
+![Leader Board](./Project%20Reports/Game%20Screenshots/LeaderBoard.png)
 
 
