@@ -7,3 +7,11 @@ Feedback indicates progress, at this intial stage of project we formulated a pla
 ## Week-2
 
 Unity contains several dependent files and a significant number of files are changed for a small task. This caused issues while using version control for our project. After taking feedback on this issue from Unity users and along with our own understaning of file generation, We found a small set of files to be pushed, so that any other can import those file and the unity editor will auto generate the remaining ones. To test our approch we manually tested the code, fetching it from the master. So we took a feedback about the operation about a commit from other team members.
+
+## Week-3
+
+In Week-3 we completed the major portion of the game. While doing so every team member tested eachothers code. While doing so we found various bugs and these were fixed immediately.
+
+## Week-4
+
+In the final week of the project we took feedback from the some users about the game. In response they suggested few improvements in the game. This changes included swift movement of player while changing lanes and some small tweaks in the UI. We implemented this changes in the final game build.
