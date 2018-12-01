@@ -11,3 +11,7 @@ Unity game engine is one of the most popular gaming engines. It has a very intri
 ## Week-3:
 
 During this week we completed most of the functionality necessary for the game like Obstacle handling and Different boost upgrades. While implementing these functionalities we used Design patterns like Factory pattern to create the objects and Observer pattern to handle the collisions. Using Deisgn patterns made the code more modular and Explainable. We used the naming conventions agreed upon by everyone in the group, making the code Browsable. We are constantly learning more and more about Unity Engine to implement simpler solutions in our code. To sum up Week 3, implenting design patterns have made it easier for us to undertand, browse and explain the code. 
+
+## Week-4:
+
+During this week we completed the game in time and created a video ad for the game. Having implemented pattern in our project, it was easier to integrate the Leaderboards functionality in the game. The task of Leaderboards was simplified by implementing Bridge pattern and allowed the program to be easier to understand. Finally, following the Agile methodologies made it easier to manage the project and encouraged simplicity. According to our initial requirements we implemented just the specified features and not more but still tried to be unique in the possibilities. All the features available in the game were based on the initial design.
