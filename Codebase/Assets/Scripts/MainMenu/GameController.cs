@@ -6,6 +6,7 @@ public class GameController
     private float volume;
     private bool musicOption;
     private string player = "john";
+    private string userName = "John Snow";
     private static GameController instance = null;
 
     private GameController()
@@ -36,6 +37,11 @@ public class GameController
         return player;
     }
 
+    public string GetUserName()
+    {
+        return userName;
+    }
+
     public void SetVolume(float vol)
     {
         volume = vol;
@@ -49,5 +55,10 @@ public class GameController
     public void SetPlayer(string player)
     {
         this.player = player;
+    }
+
+    public void SetUserName(string name)
+    {
+        userName = name;
     }
 }

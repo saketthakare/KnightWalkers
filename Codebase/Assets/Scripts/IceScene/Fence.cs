@@ -29,8 +29,7 @@ public class Fence : MonoBehaviour, IObject {
 
     public void notifyPlayer(String objectType)
     {
-        Debug.Log("Touched Fence");
-        player.updateSphere(objectType);
+       player.updateSphere(objectType);
     }
 
     public void attachPlayer(sphere player)

@@ -53,7 +53,6 @@ public class PlayerHealth : MonoBehaviour, IHealthObserver {
         if (this.currentHealth > 0)
         {
             damaged = true;
-            Debug.Log("Current Health : "+currentHealth);
             currentHealth -= amount;
             healthSlider.value = currentHealth;
             audioSource.Play();

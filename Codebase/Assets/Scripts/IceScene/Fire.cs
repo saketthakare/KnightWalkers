@@ -35,7 +35,6 @@ public class Fire : MonoBehaviour, IObject {
     
     public void notifyPlayer(String objectType)
     {
-        Debug.Log("Touched Fire");
         player.updateSphere(objectType);
     }
 } 

@@ -39,12 +39,6 @@ public class AudioController : MonoBehaviour
     private void ToggleAudio()
     {
         audioSource.enabled = !audioSource.enabled;
-        /*if (audioSource.volume.Equals(0.0f))
-        {
-            audioSource.volume = globalAudioController.GetVolume();
-        }
-        else
-            audioSource.volume = 0.0f;*/
         gameController.SetMusicOption(audioSource.enabled);
     }
 
