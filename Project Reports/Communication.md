@@ -23,3 +23,11 @@ We plan to continue the same for all the future discussions.
 - Next, we found out the areas of overlap and the amount of work to be done by each person in such cases.
 - Also, we communicated among oursleves to decide various design patterns to be implemented and took each other's feedback for the same.
 - Due to proper communication among ourselves, we could ensure development of quality code.
+
+## Week-4:
+
+- Being the last week, we met many times to discuss about the project presentation, finalize the UML diagrams and work on the Ad video. 
+- Changing the 2D characters to 3D characters in the game required a lot of discussion and brainstorming. For this we needed proper communication and collaboration among the team members. 
+- Also, as the final week approached we had a meeting to check on any integration problems and get everything to work.
+- While testing the game, proper communication was needed to communicate bugs in every module with each team member.
+- Additionally, we interacted with actual end users asking them to try our game and give us their valuable feedback which helped us enhance our game
