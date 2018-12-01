@@ -10,8 +10,9 @@ public class Menu : MonoBehaviour
     readonly ICommand characterCommand = new CharacterCommand();
     readonly ICommand homeCommand = new HomeCommand();
     readonly ICommand pauseCommand = new PauseCommand();
+    readonly ICommand leaderboardCommand = new LeaderboardCommand();
 
-    public Button quitButton, settingsButton, helpButton, playButton, characterSelectionButton, homeButton, pauseButton;
+    public Button quitButton, settingsButton, helpButton, playButton, characterSelectionButton, homeButton, pauseButton, leaderboardButton;
 
     void Start(){
         if(quitButton)
@@ -28,5 +29,7 @@ public class Menu : MonoBehaviour
             homeButton.onClick.AddListener(homeCommand.Execute);
         if (pauseButton)
             pauseButton.onClick.AddListener(pauseCommand.Execute);
+        if (leaderboardButton)
+            leaderboardButton.onClick.AddListener(leaderboardCommand.Execute);
     }
 }
