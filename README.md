@@ -27,15 +27,15 @@ Following design patterns have been implemented to build the game features-
 
 - CLass Diagram
 
-![Class-Diag](./Project%20Reports/UML%20Diagrams/Class Diagram.png)
+![Class-Diag](./Project%20Reports/UML%20Diagrams/ClassDiagram.png)
 
 - Sequence Diagram
 
-![Sequence-Diag](./Project%20Reports/UML%20Diagrams/Class Diagram.png)
+![Sequence-Diag](./Project%20Reports/UML%20Diagrams/SequenceDiagram.png)
 
 - Activity Diagram
 
-![Activity-Diag](./Project%20Reports/UML%20Diagrams/Activity Diagram.png)
+![Activity-Diag](./Project%20Reports/UML%20Diagrams/ActivityDiagram.png)
 
 - Use Case Diagram
 
