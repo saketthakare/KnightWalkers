@@ -7,5 +7,68 @@
 4. Priyal Agrawal
 5. Saket Thakare
 
-## Project idea
-We are building a game named <TBD>. The game is being built on Unity3D game engine. The theme of the game is based on the famous TV series: Game Of Thrones. 
+## Project Idea
+We are building a game named 'KNIGHT WALKERS'. This is an endless running game, built on Unity3D game engine. The theme of the game is based on the famous TV series: Game Of Thrones. Player can select from three characters - Hound, Tyrion and Khal Drogo. In the game play, player can collect coins and speed boosts to increase the score, while avoiding obstacles in the form of fire and fences. If the player touches any of these obstacles, his health will be reduced. Lost health can be regained by collecting health potion. Game will end once player loses all of his health. Final score of player will be displayed on the score board after end of game play. We have also implemented a leader board functionality which displays the names of top five scorers, along with the rank as per current game play. For this purpose, we are sending the score for each game play to a node.js server hosted on cloud via APIs. All the scores are stored in cloud hosted MySQL database. 
+
+## Links for project artifacts
+- Scrum Burndown Report
+- Youtube Video
+
+## Design Patterns
+Following design patterns have been implemented to build the game features-
+
+- Command Pattern for game menu
+- Factory pattern for creating game objects like fire, fence, boost, coin and health-potion
+- Observer pattern for handling collisions with game objects mentioned above
+- Observer pattern for monitoring and updating player health
+- Bridge pattern for storing scores on server and fetching leader board data
+
+##UML Diagrams
+
+- CLass Diagram
+
+![Class-Diag](./Project Reports/UML Diagrams/Class Diagram.png)
+
+- Sequence Diagram
+
+![Sequence-Diag](./Project Reports/UML Diagrams/Class Diagram.png)
+
+- Activity Diagram
+
+![Activity-Diag](./Project Reports/UML Diagrams/Activity Diagram.png)
+
+- Use Case Diagram
+
+![UseCase-Diag](./Project Reports/UML Diagrams/UseCase.png)
+
+## Game Play Screenshots
+
+- Main Menu
+
+![Main Menu](./Project Reports/Game Screenshots/MainMenu.png)
+
+- Instructions Screen
+
+![Instructions](./Project Reports/Game Screenshots/InstructionsMenu.png)
+
+- Audio Settings Screen
+
+![Audio Settings](./Project Reports/Game Screenshots/AudioSettingsMenu.png)
+
+- Character Selection Screen
+
+![Character Selection](./Project Reports/Game Screenshots/CharacterSelectionMenu.png)
+
+- Game Play
+
+![Game Play](./Project Reports/Game Screenshots/GamePlay.png)
+
+- Score Board
+
+![Score Board](./Project Reports/Game Screenshots/ScoreBoard.png)
+
+- Leader Board
+
+![Leader Board](./Project Reports/Game Screenshots/LeaderBoard.png)
+
+
