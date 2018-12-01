@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class Menu : MonoBehaviour, IMenu
+public class Menu : MonoBehaviour
 {
     readonly ICommand quitCommand = new QuitCommand();
     readonly ICommand settingsCommand = new SettingsCommand();
@@ -29,27 +29,4 @@ public class Menu : MonoBehaviour, IMenu
         if (pauseButton)
             pauseButton.onClick.AddListener(pauseCommand.Execute);
     }
-
-    /*public void handleInput(){
-    }
-    public void Play()
-    {
-
-    }
-
-    public void Help()
-    {
-
-    }
-
-    public void Settings()
-    {
-        GameObject.FindWithTag("MainMenu").SetActive(false);
-        GameObject.Find("Canvas").transform.Find("SettingsMenu").gameObject.SetActive(true);
-    }
-
-    public void Quit()
-    {
-       quitCommand.Execute();
-    }*/
 }
