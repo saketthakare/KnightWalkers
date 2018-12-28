@@ -24,7 +24,7 @@ Following design patterns have been implemented to build the game features-
 - Observer pattern for monitoring and updating player health
 - Bridge pattern for storing scores on server and fetching leader board data
 
-##UML Diagrams
+## UML Diagrams
 
 - CLass Diagram
 
